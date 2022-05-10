@@ -1,0 +1,29 @@
+{
+  lyricsCollection {
+    items {
+      sys {
+        id
+      }
+      slug
+      lyric
+      yourPerspective
+      lyricWriter
+      {
+        name,
+        slug
+      }
+      
+      yourPerspective
+      song{
+        name
+        slug
+      }
+      commentsCollection{
+        items{
+          name,
+          comment
+        }
+      }
+    }
+  }
+}

@@ -4,12 +4,3 @@ export default function about() {
         <h1>About us </h1>
     )
 }
-
-{/* 
-export async function getStaticProps() {
-    return {
-      props: {
-        // our beautiful Contentful content
-      }
-    }
-  } */}

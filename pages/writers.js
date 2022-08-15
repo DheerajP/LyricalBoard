@@ -1,20 +1,21 @@
 import Head from 'next/head'
-import LyricList from '../components/LyricList'
+import WritersList from '../components/WritersList'
 
-export default function Home({ lyrics }) {
+export default function Writers({ writers }) {
+  console.log(writers)
   return (
     <>
       <main role="main">
         <div className="jumbotron">
           <div className="container">
-            <h1 className="display-3">Welcome to Lyrical board</h1>
-            <p>A platform to share and discuss the lyrics you love and interested in!</p>
+            <h1 className="display-3">Writers</h1>
+            {/* <p>A platform to share and discuss the lyrics you love and interested in!</p> */}
             {/* <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p> */}
           </div>
         </div>
         <div className="container">
           <div className="row">
-            <LyricList lyrics={lyrics} />
+            <WritersList writers={writers} />
           </div>
         </div>
 
@@ -30,32 +31,14 @@ export async function getStaticProps() {
 
   var data = JSON.stringify({
     query: `{
-  lyricsCollection {
+  writerCollection {
     items {
       sys {
         id
       }
-      internalName
       slug
-      lyric
-      yourPerspective
-      lyricWriter
-      {
-        name,
-        slug
-      }
-      
-      yourPerspective
-      song{
-        name
-        slug
-      }
-      commentsCollection{
-        items{
-          name,
-          comment
-        }
-      }
+      name
+      about
     }
   }
 }`,
@@ -81,7 +64,7 @@ export async function getStaticProps() {
   console.log(responseData.data)
   return {
     props: {
-      lyrics: responseData.data.lyricsCollection.items,
+      writers: responseData.data.writerCollection.items,
     },
   }
 }

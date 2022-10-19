@@ -1,41 +1,59 @@
-import navStyles from '../styles/Nav.module.css'
-import Link from 'next/link'
+import navStyles from "../styles/Nav.module.css";
+import Link from "next/link";
 
 const Nav = () => {
-    return (
-        // <nav className={navStyles.nav}>
-        //     <ul>
-        //         <li>
-        //             <Link href='/'>Home</Link>
-        //         </li>
-        //         <li>
-        //             <Link href='/about'>About</Link>
-        //         </li>
-        //     </ul>
-        // </nav>
+  return (
+    // <nav className={navStyles.nav}>
+    //     <ul>
+    //         <li>
+    //             <Link href='/'>Home</Link>
+    //         </li>
+    //         <li>
+    //             <Link href='/about'>About</Link>
+    //         </li>
+    //     </ul>
+    // </nav>
 
-        <>
-            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a className="navbar-brand" href="#">Lyrical Board</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+    <>
+      <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a className="navbar-brand" href="#">
+          Lyrical Board
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-                <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="/">Lyrics</a>
-                        </li>
-                        <li className="nav-item active">
-                            <a className="nav-link" href="/songs">Songs</a>
-                        </li>
-                        <li className="nav-item active">
-                            <a className="nav-link" href="/writers">Writers</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/about">About us</a>
-                        </li>
-                        {/* <li class="nav-item">
+        <div className="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <Link className="nav-link" href="/">
+                <a>Lyrics</a>
+              </Link>
+            </li>
+            <li className="nav-item active">
+              <Link className="nav-link" href="/songs">
+                <a>Songs</a>
+              </Link>
+            </li>
+            <li className="nav-item active">
+              <Link className="nav-link" href="/writers">
+                <a>Writers</a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/about">
+                <a> About us</a>
+              </Link>
+            </li>
+            {/* <li class="nav-item">
                             <a class="nav-link disabled" href="#">Disabled</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -46,14 +64,11 @@ const Nav = () => {
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li> */}
-                    </ul>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
+};
 
-                </div>
-            </nav>
-        </>
-
-
-    )
-}
-
-export default Nav
+export default Nav;

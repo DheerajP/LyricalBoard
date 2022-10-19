@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import SongsList from '../components/SongsList'
+import SongsList from '../components/songsList'
 
 export default function Songs({ songs }) {
   console.log(songs)
